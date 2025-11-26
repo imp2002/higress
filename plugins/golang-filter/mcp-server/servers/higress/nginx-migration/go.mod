@@ -2,7 +2,7 @@ module nginx-migration-mcp
 
 go 1.23
 
-toolchain go1.24.9
+toolchain go1.24.10
 
 require (
 	github.com/alibaba/higress/plugins/golang-filter v0.0.0-20251023035326-7ea739292dea
@@ -11,6 +11,7 @@ require (
 	github.com/alibabacloud-go/tea v1.3.13
 	github.com/alibabacloud-go/tea-utils/v2 v2.0.7
 	github.com/envoyproxy/envoy v1.36.2
+	github.com/mark3labs/mcp-go v0.12.0
 )
 
 require (
@@ -23,7 +24,6 @@ require (
 	github.com/go-redis/redis/v8 v8.11.5 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/mark3labs/mcp-go v0.12.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/tjfoc/gmsm v1.4.1 // indirect
@@ -31,3 +31,9 @@ require (
 	google.golang.org/protobuf v1.36.10 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
 )
+
+replace github.com/alibaba/higress/plugins/golang-filter => ../../../..
+
+replace github.com/envoyproxy/envoy => github.com/higress-group/envoy v0.0.0-20250430151331-2c556780b65c
+
+replace github.com/mark3labs/mcp-go => github.com/higress-group/mcp-go v0.0.0-20250428145706-792ce64b4b30
